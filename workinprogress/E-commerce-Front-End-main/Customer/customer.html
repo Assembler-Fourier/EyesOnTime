@@ -1,0 +1,298 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title> Home</title>
+
+    <!-- Bootstrap CSS CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <!-- Our Custom CSS -->
+
+    <!-- Font Awesome JS -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/solid.js" integrity="sha384-tzzSw1/Vo+0N5UhStP3bvwWPq+uvzCMfrN1fEFe+xBmv1C/AtVX5K0uZtmcHitFZ" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/fontawesome.js" integrity="sha384-6OIrr52G08NpOFSZdxxz1xdNSndlD4vdcf/q2myIUVO0VsqaGHJsB0RaBE01VTOY" crossorigin="anonymous"></script>
+    
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <!-- Popper.JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
+    <style>
+        .top-20{
+            margin-top: -20px;
+        }
+        .top-10{
+            margin-top: -10px;
+        }
+       
+       
+        .dropdown-menu {
+    margin-top: 8px;
+}
+.dropdown-menu .dropdown-toggle::after {
+    vertical-align: middle;
+    border-left: 4px solid;
+    border-bottom: 4px solid transparent;
+    border-top: 4px solid transparent;
+}
+.dropdown-menu .dropdown .dropdown-menu {
+    left: 100%;
+    top: 0%;
+    margin:0 20px;
+    border-width: 0;
+}
+
+.dropdown-menu > li a:hover,
+.dropdown-menu > li.show {
+	background: #4c4c3f;
+	color: white;
+}
+.dropdown-menu > li.show > a{
+	color: white;
+}
+
+@media (min-width: 768px) {
+    .dropdown-menu .dropdown .dropdown-menu {
+        margin:0;
+        border-width: 1px;
+    }
+    .dropdown-menu > li a:hover,
+.dropdown-menu > li.show {
+	background: #4c4c3f;
+	color: white;
+}
+}
+    </style>
+</head>
+<body>
+<!-- Navigation -->
+<nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#">Bazar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+                  <span class="sr-only">(current)</span>
+                </a>
+          </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                aria-haspopup="true" aria-expanded="false">
+              Category
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+               <li></li><a class="dropdown-item" href="#"></a></li>
+                <li class="nav-item dropdown">
+                        <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Electronic
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            <li><a class="dropdown-item" href="#">Mobiles</a></li>
+                            <li><a class="dropdown-item" href="#">Watches</a></li>
+                            <li></li><a class="dropdown-item" href="#">Tv</a></li>
+                           
+                        </ul>
+                    </li>
+                   
+
+                    <li class="nav-item dropdown">
+                        <a class="dropdown-item dropdown-toggle" href="#" id="navbarDropdown1" role="button" data-toggle="dropdown"
+                            aria-haspopup="true" aria-expanded="false">
+                            Sports
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                            
+                            <li><a class="dropdown-item" href="#">Boxing</a></li>
+                            <li><a class="dropdown-item" href="#">Hockey</a></li>
+                            <li><a class="dropdown-item" href="#">Football</a></li>
+                            <li></li><a class="dropdown-item" href="#">Circket</a></li>
+                           
+                        </ul>
+                    </li>
+                    
+                    
+                    <li><a class="dropdown-item" href="#">Cosmatic</a></li>
+                    <li><a class="dropdown-item" href="#">Home Applinces</a></li>
+            </ul>
+        </li>
+        
+  
+       
+        <li class="nav-item">
+          <a class="nav-link" href="#">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="userCartDetails.html">Cart</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="login.html">Sign In</a>
+          </li>
+        <li class="nav-item">
+            <a class="nav-link" href="signup.html">Sign Up</a>
+          </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- Page Content -->
+<section class="py-5">
+  <!--    MAIN-DIVION-->
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-sm-12">
+            
+  <img class="img-fluid" src="images/banr.jpg" alt="banner" height="345";width="1200"> 
+        </div>
+    </div>
+    <div class="row  p-4">
+        <div class="col-sm-3 mt-2">
+            <div class="card">
+                <div class="card-header">
+                    <img class=" img-fluid" style=" height:150px" src="product.jpg" />
+                </div>
+                <div class="card-body bg-dark text-white">
+                    <h6>Product</h6>
+                </div>
+                <div class="card-footer">
+                    <small>Name</small><br>
+                          <small>Category</small><br>
+                            <small>Item description will b display here from database from product table</small>
+                            <button class="btn btn-dark mt-1 ml-5">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 mt-2">
+            <div class="card">
+                <div class="card-header">
+                    <img class=" img-fluid" style=" height:150px" src="product.jpg" />
+                </div>
+                <div class="card-body bg-dark text-white">
+                    <h6>Product</h6>
+                </div>
+                <div class="card-footer">
+                    <small>Name</small><br>
+                          <small>Category</small><br>
+                            <small>Item description will b display here from database from product table</small>
+                            <button class="btn btn-dark mt-1 ml-5">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 mt-2">
+            <div class="card">
+                <div class="card-header">
+                    <img class=" img-fluid" style=" height:150px" src="product.jpg" />
+                </div>
+                <div class="card-body bg-dark text-white">
+                    <h6>Product</h6>
+                </div>
+                <div class="card-footer">
+                    <small>Name</small><br>
+                          <small>Category</small><br>
+                            <small>Item description will b display here from database from product table</small>
+                            <button class="btn btn-dark mt-1 ml-5">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-3 mt-2">
+            <div class="card">
+                <div class="card-header">
+                    <img class=" img-fluid" style=" height:150px" src="product.jpg" />
+                </div>
+                <div class="card-body bg-dark text-white">
+                    <h6>Product</h6>
+                </div>
+                <div class="card-footer">
+                    <small>Name</small><br>
+                          <small>Category</small><br>
+                            <small>Item description will b display here from database from product table</small>
+                            <button class="btn btn-dark mt-1 ml-5">Add To Cart</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+    <script type="text/javascript">
+    $(document).ready(function () {
+        $("#sidebar").mCustomScrollbar({
+            theme: "minimal"
+        });
+
+        $('#dismiss, .overlay').on('click', function () {
+            // hide sidebar
+            $('#sidebar').removeClass('active');
+            // hide overlay
+            $('.overlay').removeClass('active');
+        });
+
+        $('#sidebarCollapse').on('click', function () {
+            // open sidebar
+            $('#sidebar').addClass('active');
+            // fade in the overlay
+            $('.overlay').addClass('active');
+            $('.collapse.in').toggleClass('in');
+            $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+        });
+    });
+</script>
+<!-- Top Header MultiLevel Code -->
+<script>
+    (function($) {
+    var defaults={
+        sm : 540,
+        md : 720,
+        lg : 960,
+        xl : 1140,
+        navbar_expand: 'lg'
+    };
+    $.fn.bootnavbar = function() {
+
+        var screen_width = $(document).width();
+
+        if(screen_width >= defaults.lg){
+            $(this).find('.dropdown').hover(function() {
+                $(this).addClass('show');
+                $(this).find('.dropdown-menu').first().addClass('show').addClass('animated fadeIn').one('animationend oAnimationEnd mozAnimationEnd webkitAnimationEnd', function () {
+                    $(this).removeClass('animated fadeIn');
+                });
+            }, function() {
+                $(this).removeClass('show');
+                $(this).find('.dropdown-menu').first().removeClass('show');
+            });
+        }
+
+        $('.dropdown-menu a.dropdown-toggle').on('click', function(e) {
+          if (!$(this).next().hasClass('show')) {
+            $(this).parents('.dropdown-menu').first().find('.show').removeClass("show");
+          }
+          var $subMenu = $(this).next(".dropdown-menu");
+          $subMenu.toggleClass('show');
+
+          $(this).parents('li.nav-item.dropdown.show').on('hidden.bs.dropdown', function(e) {
+            $('.dropdown-submenu .show').removeClass("show");
+          });
+
+          return false;
+        });
+    };
+})(jQuery);
+   
+$(function () {
+        $('#main_navbar').bootnavbar();
+    })
+    
+</script>
+</body>
+</html>

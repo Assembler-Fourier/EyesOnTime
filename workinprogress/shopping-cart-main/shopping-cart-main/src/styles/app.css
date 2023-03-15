@@ -1,0 +1,22 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    flex: 1;
+    min-height: 100vh;
+}
+
+.spacer {
+    flex: 1;
+}
+
+.add-to-cart-alert{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+.add-to-cart-alert a {
+    color: darkcyan;
+}

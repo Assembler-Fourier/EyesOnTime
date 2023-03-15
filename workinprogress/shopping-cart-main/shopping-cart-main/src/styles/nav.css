@@ -1,0 +1,38 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+    padding: 1rem;
+    border-bottom: darkcyan 0px solid;
+    margin-bottom: 0;
+
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    margin-right: 5vw;
+}
+
+.home-products{
+    display: flex;
+    gap: 3vw;
+    flex: 1;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+}
+
+.menu-icon{
+    flex:1;
+    justify-content: center;
+}
+
+nav a{
+    color: darkcyan;
+}

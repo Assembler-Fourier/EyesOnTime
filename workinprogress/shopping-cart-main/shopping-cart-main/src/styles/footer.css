@@ -1,0 +1,21 @@
+.footer {
+    background-color: rgb(65, 65, 65);
+    color: white;
+    list-style:none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 1vw;
+    padding-right:1vw;
+    padding-top: 1vh;
+    padding-bottom: 1vh;
+
+}
+
+.footer a{
+    color: rgb(44, 194, 194);
+}
+
+.footer ul {
+    list-style: none;
+}

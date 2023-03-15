@@ -2,31 +2,28 @@ const express = require("express");
 const app = express();
 const indexRoutes = require("./routes/index.route");
 
-const mysql = require("mysql2/promise");
-const pool = mysql.createPool({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "movie",
-  waitForConnections: true,
-  connectionLimit: 10,
-  queueLimit: 0,
+const Sequelize = require('sequelize');
+const sequelize = new Sequelize('movie', 'root', '', {
+  host: 'localhost',
+  dialect: 'mysql',
 });
 
-(async function () {
-  try {
-    const conn = await pool.getConnection();
-    console.log("connected as id " + conn.threadId);
+sequelize.authenticate()
+  .then(() => {
+    console.log('Connection has been established successfully.');
 
-    const [rows, fields] = await conn.execute("SELECT * FROM movie_table");
-    console.log("The Movie is: ", rows);
-
-    conn.release();
-  } catch (err) {
-    console.error("Error connecting to database: ", err);
-  }
-})();
-
-app.use("/", indexRoutes);
-
-app.listen(3000);
+    sequelize.query('SELECT * FROM movie_table', {
+      type: Sequelize.QueryTypes.SELECT,
+    })
+    .then((movies) => {
+      console.log('The Movies are:', movies);
+      sequelize.close();
+    })
+    .catch((err) => {
+      console.error('Unable to retrieve movies:', err);
+      sequelize.close();
+    });
+  })
+  .catch((err) => {
+    console.error('Unable to connect to the database:', err);
+  });

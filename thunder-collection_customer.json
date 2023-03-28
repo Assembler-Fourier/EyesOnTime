@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "customer",
+    "dateExported": "2023-03-28T21:13:25.913Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "2c026b25-9c1d-4933-8864-06decbd4e07f",
+            "colId": "d2bcc73a-562d-49f6-a032-c5c940ed2c4a",
+            "containerId": "",
+            "name": "create customer",
+            "url": "http://localhost:3001/api/customers",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-03-28T20:53:52.119Z",
+            "modified": "2023-03-28T20:58:34.093Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"first_name\": \"John\",\n  \"last_name\": \"ali\",\n  \"email\": \"johndoe2@gmail.com\",\n  \"password\" : \"12345678\"\n}\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "48185387-3f2d-490b-929b-17c4f334cb31",
+            "colId": "d2bcc73a-562d-49f6-a032-c5c940ed2c4a",
+            "containerId": "",
+            "name": "update customer",
+            "url": "http://localhost:3001/api/customers/1",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2023-03-28T20:55:19.864Z",
+            "modified": "2023-03-28T20:55:19.864Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"last_name\": \"Ali\"\r\n  \r\n}\r\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "ecf939d9-2454-4824-8fdb-6684d9282539",
+            "colId": "d2bcc73a-562d-49f6-a032-c5c940ed2c4a",
+            "containerId": "",
+            "name": "delete",
+            "url": "http://localhost:3001/api/customers/1",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2023-03-28T20:56:41.525Z",
+            "modified": "2023-03-28T20:56:41.525Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "018a9a7b-b397-40a5-84e4-fa5555368c00",
+            "colId": "d2bcc73a-562d-49f6-a032-c5c940ed2c4a",
+            "containerId": "",
+            "name": "get all customers",
+            "url": "http://localhost:3001/api/customers",
+            "method": "GET",
+            "sortNum": 40000,
+            "created": "2023-03-28T20:57:53.132Z",
+            "modified": "2023-03-28T20:57:53.132Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

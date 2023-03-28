@@ -12,22 +12,33 @@ sequelize.authenticate()
     console.error('Unable to connect to the database:', error);
   });
 
-const Book = sequelize.define("books", {
-   title: {
-     type: DataTypes.STRING,
-     allowNull: false
-   },
-   author: {
-     type: DataTypes.STRING,
-     allowNull: false
-   },
-   release_date: {
-     type: DataTypes.DATEONLY,
-   },
-   subject: {
-     type: DataTypes.INTEGER,
-   }
-});
+  const Book = sequelize.define("bookss", {
+    title: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    author: {
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+    release_date: {
+      type: DataTypes.DATEONLY,
+    },
+    subject: {
+      type: DataTypes.INTEGER,
+    },
+    price: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+      validate: {
+        min: {
+          args: 100,
+          msg: "Price must be greater than or equal to 100."
+        }
+      }
+    }
+ });
+ 
 
 sequelize.sync()
   .then(() => {
@@ -44,7 +55,8 @@ sequelize.sync()
          title: "Clean Code",
          author: "Robert Cecil Martin",
          release_date: "2021-12-14",
-         subject: 3
+         subject: 3,
+         price: 101
      }).then(res => {
          console.log(res)
      }).catch((error) => {

@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Products",
+    "dateExported": "2023-03-28T21:13:18.494Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "d862b31a-a326-400d-a670-5f8c7a931fc6",
+            "colId": "3c661d62-10b7-41ea-a52b-cedc09141e76",
+            "containerId": "",
+            "name": "GET all products",
+            "url": "http://localhost:3001/api/products",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-03-28T20:40:26.257Z",
+            "modified": "2023-03-28T20:40:26.257Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "4a1cb7a9-3006-4629-b310-1e1b0b419cef",
+            "colId": "3c661d62-10b7-41ea-a52b-cedc09141e76",
+            "containerId": "",
+            "name": "CREATE a new product",
+            "url": "http://localhost:3001/api/products",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-03-28T20:44:39.350Z",
+            "modified": "2023-03-28T20:44:39.350Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"product_name\": \"chatri tate\",\r\n    \"price\": 100.99,\r\n    \"stock\": 15\r\n}\r\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "5598dbf5-7147-44f5-90d4-bb7dd8f2fc0d",
+            "colId": "3c661d62-10b7-41ea-a52b-cedc09141e76",
+            "containerId": "",
+            "name": "Update Product",
+            "url": "http://localhost:3001/api/products/9",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-03-28T20:46:28.076Z",
+            "modified": "2023-03-28T20:46:28.076Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"product_name\": \"Updated product name\"\r\n\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a8fb27e7-d41d-4f89-a665-56c6adb32509",
+            "colId": "3c661d62-10b7-41ea-a52b-cedc09141e76",
+            "containerId": "",
+            "name": "delete product",
+            "url": "http://localhost:3001/api/products/13",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-03-28T20:48:35.065Z",
+            "modified": "2023-03-28T20:48:35.065Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

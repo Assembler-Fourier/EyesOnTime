@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "tags",
+    "dateExported": "2023-03-28T21:13:40.481Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "a61676ca-ed5a-492f-9bbc-2547420c705f",
+            "colId": "8e4ddda2-4603-4284-af41-6cc11e3f22f3",
+            "containerId": "",
+            "name": "get all tags",
+            "url": "http://localhost:3001/api/tags",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-03-28T21:09:05.132Z",
+            "modified": "2023-03-28T21:09:05.132Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "3b1cd60c-42d6-46ea-a54a-a6449eb3b3af",
+            "colId": "8e4ddda2-4603-4284-af41-6cc11e3f22f3",
+            "containerId": "",
+            "name": "create tag",
+            "url": "http://localhost:3001/api/tags",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2023-03-28T21:09:48.318Z",
+            "modified": "2023-03-28T21:09:48.318Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n\"tag_name\": \"New Tag\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "8b4e7906-ab34-4dd0-b20e-385a1ae559ae",
+            "colId": "8e4ddda2-4603-4284-af41-6cc11e3f22f3",
+            "containerId": "",
+            "name": "update tag",
+            "url": "http://localhost:3001/api/tags/9",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-03-28T21:10:46.097Z",
+            "modified": "2023-03-28T21:10:46.097Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n\"tag_name\": \"Updated Tag\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "a6304cd8-b7f1-4927-8e0d-224e257799f4",
+            "colId": "8e4ddda2-4603-4284-af41-6cc11e3f22f3",
+            "containerId": "",
+            "name": "delete tag",
+            "url": "http://localhost:3001/api/tags/9",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-03-28T21:11:14.353Z",
+            "modified": "2023-03-28T21:11:14.353Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

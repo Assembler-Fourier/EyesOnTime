@@ -1,0 +1,80 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "Brand",
+    "dateExported": "2023-03-28T21:12:42.632Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "4a4fe70e-f07d-4485-b580-e916bd491471",
+            "colId": "2ac67e08-57ab-4238-bd84-755b19b7a538",
+            "containerId": "",
+            "name": "Add Brand",
+            "url": "http://localhost:3001/api/brands",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-03-28T19:58:01.199Z",
+            "modified": "2023-03-28T19:58:01.199Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"brand_name\": \"Nike\"\r\n}\r\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "024742ea-bac9-4062-a438-d6789874d734",
+            "colId": "2ac67e08-57ab-4238-bd84-755b19b7a538",
+            "containerId": "",
+            "name": "get brands name",
+            "url": "http://localhost:3001/api/brands",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2023-03-28T20:10:56.914Z",
+            "modified": "2023-03-28T20:10:56.914Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"brand_name\": \"Puma\",\r\n    \"description\": \"A German multinational corporation\",\r\n    \"founded_year\": 1948,\r\n    \"website\": \"https://www.puma.com/\"\r\n}\r\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "2f9d155f-414d-4a05-a556-b750d477d30d",
+            "colId": "2ac67e08-57ab-4238-bd84-755b19b7a538",
+            "containerId": "",
+            "name": "update brand name",
+            "url": "http://localhost:3001/api/brands/1",
+            "method": "PUT",
+            "sortNum": 30000,
+            "created": "2023-03-28T20:18:43.881Z",
+            "modified": "2023-03-28T20:18:43.881Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"brand_name\": \"Updated Brand\"\r\n}",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "675f799c-198c-490a-822d-d789dd8eae6c",
+            "colId": "2ac67e08-57ab-4238-bd84-755b19b7a538",
+            "containerId": "",
+            "name": "delete brand",
+            "url": "http://localhost:3001/api/brands/3",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-03-28T20:19:51.904Z",
+            "modified": "2023-03-28T20:19:51.904Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

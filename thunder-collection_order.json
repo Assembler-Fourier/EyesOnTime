@@ -1,0 +1,42 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "order",
+    "dateExported": "2023-03-28T21:13:10.100Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "fe6ea693-173c-4bef-be8a-94dad2ab563f",
+            "colId": "3547ce8f-0df3-4937-9eaf-f101dda7aa2d",
+            "containerId": "",
+            "name": "create order",
+            "url": "http://localhost:3001/api/orders",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2023-03-28T20:36:21.216Z",
+            "modified": "2023-03-28T20:36:21.216Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n  \"order_date\": \"2023-03-29 12:00:00\"\r\n}\r\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "dcdac0c7-abc2-430c-8ea7-0f050b85c574",
+            "colId": "3547ce8f-0df3-4937-9eaf-f101dda7aa2d",
+            "containerId": "",
+            "name": "delete order",
+            "url": "http://localhost:3001/api/orders/11",
+            "method": "DELETE",
+            "sortNum": 20000,
+            "created": "2023-03-28T20:37:34.643Z",
+            "modified": "2023-03-28T20:37:34.643Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

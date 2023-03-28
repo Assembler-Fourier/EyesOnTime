@@ -1,0 +1,75 @@
+{
+    "client": "Thunder Client",
+    "collectionName": "categories",
+    "dateExported": "2023-03-28T21:13:34.573Z",
+    "version": "1.1",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "f5f0ca35-1641-4be4-bc18-49f9b188e9ff",
+            "colId": "8a81cda1-d2a2-45b0-9bb0-85002dd1bf4c",
+            "containerId": "",
+            "name": "get all categories",
+            "url": "http://localhost:3001/api/categories",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2023-03-28T21:03:24.171Z",
+            "modified": "2023-03-28T21:03:24.171Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        },
+        {
+            "_id": "f39618cf-2f1c-4738-988a-d5e3091734d2",
+            "colId": "8a81cda1-d2a2-45b0-9bb0-85002dd1bf4c",
+            "containerId": "",
+            "name": "update categorie",
+            "url": "http://localhost:3001/api/categories/2",
+            "method": "PUT",
+            "sortNum": 20000,
+            "created": "2023-03-28T21:04:12.438Z",
+            "modified": "2023-03-28T21:04:12.438Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"category_name\": \"Updated Category\"\r\n}\r\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "20dd7a0d-4022-4e93-be91-7f9f214761eb",
+            "colId": "8a81cda1-d2a2-45b0-9bb0-85002dd1bf4c",
+            "containerId": "",
+            "name": "create categories",
+            "url": "http://localhost:3001/api/categories",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2023-03-28T21:05:44.673Z",
+            "modified": "2023-03-28T21:05:44.673Z",
+            "headers": [],
+            "params": [],
+            "body": {
+                "type": "json",
+                "raw": "{\r\n    \"category_name\": \"new category\"\r\n}\r\n",
+                "form": []
+            },
+            "tests": []
+        },
+        {
+            "_id": "1f71e65a-a368-4453-8d65-f5eb40039dd5",
+            "colId": "8a81cda1-d2a2-45b0-9bb0-85002dd1bf4c",
+            "containerId": "",
+            "name": "delete categories",
+            "url": "http://localhost:3001/api/categories/6",
+            "method": "DELETE",
+            "sortNum": 40000,
+            "created": "2023-03-28T21:06:26.473Z",
+            "modified": "2023-03-28T21:06:26.473Z",
+            "headers": [],
+            "params": [],
+            "tests": []
+        }
+    ]
+}

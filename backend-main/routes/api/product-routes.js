@@ -1,51 +1,54 @@
 const router = require("express").Router();
 const {Product, Category, Tag, ProductTag} = require("../../models");
 const path = require('path');
-<<<<<<< HEAD
 const { Op } = require("sequelize");
-=======
->>>>>>> 7eabce223d9a38b2d9ae32e17696bf336cf38692
 const fs = require('fs'); // Import fs module
 
 // The `/api/products` endpoint
 
-
 router.get("/", async (req, res) => {
-<<<<<<< HEAD
-	const { page = 1, limit = 10, minPrice = 0, maxPrice = Infinity } = req.query;
+	const { page = 1, limit = 10, minPrice, maxPrice } = req.query;
 	const offset = (page - 1) * limit;
   
-	// find all products with pagination and price range filter
+	// Prepare the query options
+	let queryOptions = {
+	  attributes: ["id", "product_name", "price", "stock"],
+	  limit,
+	  offset,
+	};
+  
+	// Add price filter if minPrice or maxPrice is provided
+	if (minPrice || maxPrice) {
+	  queryOptions.where = {
+		price: {
+		  [Op.between]: [
+			minPrice || 0,
+			maxPrice || Infinity,
+		  ],
+		},
+	  };
+	}
+  
+	// Find all products with pagination and price range filter
 	try {
-		const products = await Product.findAndCountAll({
-		  attributes: ["id", "product_name", "price", "stock"],
-		  limit,
-		  offset,
-		  where: {
-			  price: {
-				  [Op.between]: [minPrice, maxPrice]
-			  }
-		  }
-		});
-		
-		// send response
-		res.json(products);
+	  const products = await Product.findAndCountAll(queryOptions);
+  
+	  // Send response
+	  res.json(products);
 	} catch (error) {
-		// handle error
-		console.error(error);
-		res.status(500).sendFile(path.join(__dirname, '..', '..', 'error.html'), {}, function (err) {
-			if (err) {
-				console.error(err);
-			}
-		});
+	  // Handle error
+	  console.error(error);
+	  res.status(500).sendFile(path.join(__dirname, '..', '..', 'error.html'), {}, function (err) {
+		if (err) {
+		  console.error(err);
 		}
-});
-
+	  });
+	}
+  });
+  
 
 /*
 router.get("/", async (req, res) => {
-=======
->>>>>>> 7eabce223d9a38b2d9ae32e17696bf336cf38692
 	const { page = 1, limit = 10 } = req.query;
 	const offset = (page - 1) * limit;
   
@@ -65,11 +68,7 @@ router.get("/", async (req, res) => {
 		res.status(500).sendFile(__dirname, '..', '..', 'error.html');
 	}
 });
-<<<<<<< HEAD
 */
-=======
-  
->>>>>>> 7eabce223d9a38b2d9ae32e17696bf336cf38692
 /*
 // get all products
 router.get("/", async (req, res) => {

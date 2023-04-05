@@ -1,18 +1,36 @@
 const router = require('express').Router();
 const { Customer } = require('../../models');
+const path = require('path');
+const { Op } = require("sequelize");
+const fs = require('fs'); // Import fs module
 
 // The `/api/customers` endpoint
 
 router.get('/', async (req, res) => {
-  // find all customers
-  await Customer.findAll({})
-    .then((customers) => {
-      res.json(customers);
-    })
-    .catch((err) => {
-      res.json(err);
+  const limit = req.query.limit ? parseInt(req.query.limit) : 5; // default limit is 10
+  const page = req.query.page ? parseInt(req.query.page) : 1; // default page is 1
+  const offset = (page - 1) * limit;
+  
+  try {
+    const customers = await Customer.findAll({
+      limit: limit,
+      offset: offset
     });
+    const count = await Customer.count(); // get total count of customers
+    const totalPages = Math.ceil(count / limit);
+    const currentPage = page > totalPages ? totalPages : page;
+
+    res.json({
+      currentPage: currentPage,
+      totalPages: totalPages,
+      totalCount: count,
+      customers: customers
+    });
+  } catch (err) {
+    res.json(err);
+  }
 });
+
 
 router.get('/:id', async (req, res) => {
   // find one customer by its `id` value

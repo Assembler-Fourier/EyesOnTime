@@ -1,23 +1,48 @@
 const router = require('express').Router();
 const { Brand, Product } = require('../../models');
+const path = require('path');
+const { Op } = require("sequelize");
+const fs = require('fs'); // Import fs module
 
 // The `/api/brands` endpoint
 
-router.get('/', async (req, res) => {
-  // find all brands
-  await Brand.findAll({
-    attributes: ["id", "brand_name"],
-    include: [{
-      model: Product,
-      attributes: ["id", "product_name", "price", "stock", "brand_id"]
-    }]
-  })
-  .then((brands) => {
-    res.json(brands);
-  })
 
-  // be sure to include its associated Products
+router.get('/', async (req, res) => {
+  // Get limit, page number, and price range from the URL
+  const limit = 1;
+  const page = req.query.page ? parseInt(req.query.page) : 1;
+  const minPrice = req.query.minPrice ? parseFloat(req.query.minPrice) : 0;
+  const maxPrice = req.query.maxPrice ? parseFloat(req.query.maxPrice) : Infinity;
+
+  // Calculate offset based on page number
+  const offset = (page - 1) * limit;
+
+  // Find all brands with associated products within the price range
+  await Brand.findAll({
+    attributes: ['id', 'brand_name'],
+    include: [
+      {
+        model: Product,
+        attributes: ['id', 'product_name', 'price', 'stock', 'brand_id'],
+        where: {
+          price: {
+            [Op.gte]: minPrice,
+            [Op.lte]: maxPrice,
+          },
+        },
+      },
+    ],
+    limit: limit,
+    offset: offset,
+  })
+    .then((brands) => {
+      res.json(brands);
+    })
+    .catch((error) => {
+      res.status(500).json({ error: error.message });
+    });
 });
+
 
 router.get('/:id', async (req, res) => {
   // find one brand by its `id` value

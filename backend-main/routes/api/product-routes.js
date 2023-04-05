@@ -1,13 +1,17 @@
 const router = require("express").Router();
 const {Product, Category, Tag, ProductTag} = require("../../models");
 const path = require('path');
+<<<<<<< HEAD
 const { Op } = require("sequelize");
+=======
+>>>>>>> 7eabce223d9a38b2d9ae32e17696bf336cf38692
 const fs = require('fs'); // Import fs module
 
 // The `/api/products` endpoint
 
 
 router.get("/", async (req, res) => {
+<<<<<<< HEAD
 	const { page = 1, limit = 10, minPrice = 0, maxPrice = Infinity } = req.query;
 	const offset = (page - 1) * limit;
   
@@ -40,6 +44,8 @@ router.get("/", async (req, res) => {
 
 /*
 router.get("/", async (req, res) => {
+=======
+>>>>>>> 7eabce223d9a38b2d9ae32e17696bf336cf38692
 	const { page = 1, limit = 10 } = req.query;
 	const offset = (page - 1) * limit;
   
@@ -59,7 +65,11 @@ router.get("/", async (req, res) => {
 		res.status(500).sendFile(__dirname, '..', '..', 'error.html');
 	}
 });
+<<<<<<< HEAD
 */
+=======
+  
+>>>>>>> 7eabce223d9a38b2d9ae32e17696bf336cf38692
 /*
 // get all products
 router.get("/", async (req, res) => {

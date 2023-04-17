@@ -3,27 +3,31 @@ const sequelize = require('../config/connection.js');
 
 class Brand extends Model {}
 
-Brand.init(
-  {
-    // define columns
-    id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      autoIncrement: true,
+try {
+  Brand.init(
+    {
+      // define columns
+      id: {
+        type: DataTypes.INTEGER,
+        allowNull: false,
+        primaryKey: true,
+        autoIncrement: true,
+      },
+      brand_name: {
+        type: DataTypes.STRING,
+        allowNull: false,
+      }
     },
-    brand_name: {
-      type: DataTypes.STRING,
-      allowNull: false,
+    {
+      sequelize,
+      timestamps: false,
+      freezeTableName: true,
+      underscored: true,
+      modelName: 'brand',
     }
-  },
-  {
-    sequelize,
-    timestamps: false,
-    freezeTableName: true,
-    underscored: true,
-    modelName: 'brand',
-  }
-);
+  );
+} catch (error) {
+  console.error('Error while initializing Brand model:', error);
+}
 
 module.exports = Brand;
